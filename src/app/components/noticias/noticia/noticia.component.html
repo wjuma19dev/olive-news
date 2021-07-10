@@ -1,0 +1,17 @@
+<ion-card>
+  <ion-card-header>
+    <div class="d-flex">
+      <span class="text-primary">
+        {{ indice + 1 }}.&nbsp;
+      </span>
+      <span class="noticia-source-name">
+        <ion-card-subtitle>{{ noticia.source.name }}</ion-card-subtitle>
+      </span>
+    </div>
+    <ion-card-title>{{ noticia.title }}</ion-card-title>
+  </ion-card-header>
+  <ion-img [src]="noticia.urlToImage" ></ion-img>
+  <ion-card-content>
+    <p> {{ noticia.urlToImage }} </p>
+  </ion-card-content>
+</ion-card>

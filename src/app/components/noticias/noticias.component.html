@@ -1,0 +1,13 @@
+<ion-grid>
+  <ion-row>
+
+    <ion-col 
+      *ngFor="let noticia of noticias; let indice = index"
+      size-xs="12" size-sm="6" size-md="4" size-lg="3">
+      <app-noticia
+       [noticia]="noticia"
+       [indice]="indice"></app-noticia>
+    </ion-col>
+
+  </ion-row>
+</ion-grid>

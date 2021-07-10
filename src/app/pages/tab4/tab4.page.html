@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-toolbar color="dark">
+    <ion-avatar slot="start">
+      <ion-img src="/assets/icon/olivos.png"></ion-img>
+    </ion-avatar>
+    <ion-title>tab4</ion-title>
+  </ion-toolbar>
+
+  <ion-segment [(ngModel)]="categoriaSelected" scrollable (ionChange)="onChange($event)">
+
+    <ion-segment-button
+      color="primary"  
+      *ngFor="let categoria of categorias"
+      [value]="categoria">
+      <ion-label>{{categoria}}</ion-label>
+    </ion-segment-button>
+
+  </ion-segment>
+
+</ion-header>
+
+<ion-content color="dark">
+
+</ion-content>

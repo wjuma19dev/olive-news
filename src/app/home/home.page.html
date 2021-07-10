@@ -1,20 +1,26 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-tabs>
+  <ion-tab-bar color="dark" slot="bottom">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <!-- Vistas -->
+    <ion-tab-button tab="wall">
+      <ion-icon class="bi bi-newspaper"></ion-icon>
+      <ion-label>Muro</ion-label>
+    </ion-tab-button>
+    
+    <ion-tab-button tab="search">
+      <ion-icon class="bi bi-search"></ion-icon>
+      <ion-label>Buscar</ion-label>
+    </ion-tab-button>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+    <ion-tab-button tab="encabezado">
+      <ion-icon class="bi bi-globe"></ion-icon>
+      <ion-label>Encabezado</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="favorites">
+      <ion-icon class="bi bi-star"></ion-icon>
+      <ion-label>Favoritos</ion-label>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+</ion-tabs>
