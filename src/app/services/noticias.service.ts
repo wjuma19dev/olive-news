@@ -17,4 +17,8 @@ export class NoticiasService {
     return this.http.get<HttpHeadlinesResponse>(`https://newsapi.org/v2/top-headlines?country=us&apiKey=93737efac5774e2b9b125639f9ac0718`);
   }
 
-  getHeadlinesCatgegoria( catego
+  getHeadlinesCatgegoria( categoria: string ) {
+    return this.http.get(`https://newsapi.org/v2/top-headlines?country=de&category=business&apiKey=API_KEY`);
+  }
+
+}
