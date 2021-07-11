@@ -1,14 +1,25 @@
 <ion-card>
   <ion-card-header>
-    <div class="d-flex">
-      <span class="text-primary">
-        {{ indice + 1 }}.&nbsp;
-      </span>
-      <span class="noticia-source-name">
-        <ion-card-subtitle>{{ noticia.source.name }}</ion-card-subtitle>
-      </span>
+    <div class="d-flex ion-justify-content-between">
+      <div class="source d-flex ion-align-items-center">
+        <span class="text-primary">
+          {{ indice + 1 }}.&nbsp;
+        </span>
+        <span class="noticia-source-name">
+          <ion-card-subtitle>{{ noticia.source.name }}</ion-card-subtitle>
+        </span>
+      </div>
+      <div class="menu">
+        <ion-buttons>
+          <ion-button 
+            color="primary"
+            (click)="onActionSheet()">
+            <ion-icon slot="icon-only" color="light" class="bi bi-three-dots-vertical"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </div>
     </div>
-    <ion-card-title (click)="openNoticeInBrowser()">{{ noticia.title }}</ion-card-title>
+    <ion-card-title>{{ noticia.title }}</ion-card-title>
   </ion-card-header>
   <ion-img [src]="noticia.urlToImage" (click)="openNoticeInBrowser()"></ion-img>
   <ion-card-content>

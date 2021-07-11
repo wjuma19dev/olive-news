@@ -8,9 +8,6 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-// Native
-// import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
-
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -21,8 +18,10 @@ import { AppRoutingModule } from './app-routing.module';
     HttpClientModule
   ],
   providers: [
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    // InAppBrowser
+    {
+      provide: RouteReuseStrategy,
+      useClass: IonicRouteStrategy
+    }
   ],
   bootstrap: [AppComponent],
 })

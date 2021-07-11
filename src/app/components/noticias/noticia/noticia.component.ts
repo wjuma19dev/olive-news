@@ -2,7 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Article } from '../../../interface/interface';
 
 // Native
-// import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+import { Browser } from '@capacitor/browser';
+import { ActionsService } from '../../../services/actions.service';
 
 @Component({
   selector: 'app-noticia',
@@ -14,12 +15,19 @@ export class NoticiaComponent implements OnInit {
   @Input() noticia: Article;
   @Input() indice: number;
 
-  constructor() { }
+  constructor(
+    private actionsService: ActionsService
+  ) { }
 
   ngOnInit() {}
 
-  openNoticeInBrowser(): void {
+  async openNoticeInBrowser(): Promise<void>  {
     console.log('Abriendo el navegador en: ', this.noticia.url);
+    await Browser.open({ url: this.noticia.url });
+  }
+
+  onActionSheet(): void {
+    this.actionsService.cardMenuActionSheet();
   }
 
 }

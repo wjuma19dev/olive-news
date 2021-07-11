@@ -1,0 +1,6 @@
+{
+	"appId": "io.olivenews",
+	"appName": "olive-news",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
