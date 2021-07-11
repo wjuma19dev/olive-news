@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header class="ion-no-border">
 
   <ion-toolbar color="dark">
     <ion-avatar slot="start">
@@ -21,5 +21,19 @@
 </ion-header>
 
 <ion-content color="dark">
+
+  <app-noticias [noticias]="noticias"></app-noticias>
+
+  <ion-infinite-scroll
+    #infiniteScroll 
+    threshold="100px" 
+    (ionInfinite)="onInfiniteScroll($event)">
+
+    <ion-infinite-scroll-content
+      loadingText="Cargando más noticias"
+      loadingSpinner="circles">
+    </ion-infinite-scroll-content>
+
+  </ion-infinite-scroll>
 
 </ion-content>

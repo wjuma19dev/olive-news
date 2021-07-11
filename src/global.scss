@@ -75,6 +75,11 @@ ion-icon.bi {
         }
     }
 
+    ion-spinner,
+    .infinite-loading-text {
+        color: var(--ion-color-primary) !important;
+    }
+
 }
 
 .tab-selected {

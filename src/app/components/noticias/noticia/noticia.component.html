@@ -8,9 +8,9 @@
         <ion-card-subtitle>{{ noticia.source.name }}</ion-card-subtitle>
       </span>
     </div>
-    <ion-card-title>{{ noticia.title }}</ion-card-title>
+    <ion-card-title (click)="openNoticeInBrowser()">{{ noticia.title }}</ion-card-title>
   </ion-card-header>
-  <ion-img [src]="noticia.urlToImage" ></ion-img>
+  <ion-img [src]="noticia.urlToImage" (click)="openNoticeInBrowser()"></ion-img>
   <ion-card-content>
     <p> {{ noticia.urlToImage }} </p>
   </ion-card-content>

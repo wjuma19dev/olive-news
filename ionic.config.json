@@ -1,5 +1,7 @@
 {
   "name": "olive-news",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
