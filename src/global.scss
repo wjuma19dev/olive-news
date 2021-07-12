@@ -54,15 +54,17 @@ $black: 900;
     }
 }
 
-ion-icon.bi {
-    margin-bottom: 3px;
-    margin-top: 0;
-}
+// ion-icon.bi {
+//     margin-bottom: 3px;
+//     margin-top: 0;
+// }
 
 :root {
 
     ion-card {
         background-color: $transparent;
+        box-shadow: none;
+        border-radius: 15px;
         color: var(--ion-color-light);
 
         ion-card-title {
@@ -83,7 +85,8 @@ ion-icon.bi {
 }
 
 .tab-selected {
-    .bi, ion-label {
+    ion-icon, 
+    ion-label {
         color: var(--ion-color-primary) !important;
     }
 }

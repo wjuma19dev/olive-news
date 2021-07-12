@@ -27,7 +27,7 @@ export class NoticiaComponent implements OnInit {
   }
 
   onActionSheet(): void {
-    this.actionsService.cardMenuActionSheet();
+    this.actionsService.cardMenuActionSheet(this.noticia);
   }
 
 }

@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { Tab3PageRoutingModule } from './tab3-routing.module';
 
 import { Tab3Page } from './tab3.page';
+import { ActionsService } from '../../services/actions.service';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { Tab3Page } from './tab3.page';
     IonicModule,
     Tab3PageRoutingModule
   ],
-  declarations: [Tab3Page]
+  declarations: [Tab3Page],
+  providers: [ActionsService]
 })
 export class Tab3PageModule {}
